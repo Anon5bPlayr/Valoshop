@@ -3,7 +3,7 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { text1, text2 } = req.body;
 
-    const webhookURL = 'https://discord.com/api/webhooks/YOUR_WEBHOOK_URL'; // Replace with your webhook URL
+    const webhookURL = 'https://ptb.discord.com/api/webhooks/1345216302268026943/Q5JMVaP8gX8TpYHOuC4AnHAE4TUNUdIou6B7D2YV3Vo1GRN09yZUQOdsOo3T0a2qJjdP'; // Replace with your webhook URL
 
     const payload = {
       content: `Text Box 1: ${text1}\nText Box 2: ${text2}`,
