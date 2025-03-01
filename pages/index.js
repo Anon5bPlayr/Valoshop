@@ -12,9 +12,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title="Welcome to my the valorant shop checker!" />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          To check your shop in the 2 text boxes and the images of your shop will pop up and show images of what your shop is. <code>pages/index.js</code>
         </p>
 
         {/* Add your FormComponent here */}
