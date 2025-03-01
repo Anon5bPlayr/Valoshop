@@ -20,5 +20,3 @@ export default function Home() {
         {/* Add your FormComponent here */}
         <FormComponent /> 
       </main>
-
-     
